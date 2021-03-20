@@ -18,8 +18,8 @@ RMQ_VHOST=os.environ.get('RMQ_VHOST')
 AZ_JOB_ACCOUNT_NAME=os.environ.get('AZ_JOB_ACCOUNT_NAME')
 AZ_JOB_ACCOUNT_KEY=os.environ.get('AZ_JOB_ACCOUNT_KEY')
 
-# AZ_JOB_OP_ACCOUNT_NAME=os.environ.get('AZ_AI_JOB_OP_ACCOUNT_NAME')
-# AZ_JOB_OP_ACCOUNT_KEY=os.environ.get('AZ_AI_JOB_OP_ACCOUNT_KEY')
+# AZ_JOB_OP_ACCOUNT_NAME=os.environ.get('AZ_JOB_OP_ACCOUNT_NAME')
+# AZ_JOB_OP_ACCOUNT_KEY=os.environ.get('AZ_JOB_OP_ACCOUNT_KEY')
 
 app = Celery("jobs",
              broker="amqp://" + RMQ_USER + ":" + RMQ_PWD + "@" + RMQ_SERVER_IP + "/" + RMQ_VHOST,
